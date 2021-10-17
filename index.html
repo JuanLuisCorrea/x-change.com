@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Change</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">X-Change.com</h1>
+        <nav class="nav">
+            <a href="index.html" class="nav__link">Convertidor</a>
+            <a href="https://www.exchangerate-api.com/" target="_blank" class="nav__link">API</a>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h2 class="container__title">Convertidor</h2>
+            <form class="form">
+                <div class="form__field">
+                    <label for="amount" class="form__field--label">Importe</label>
+                    <input type="number" name="amount" id="amount" class="form__input" placeholder="$" required>
+                </div>
+                <div class="form__field">
+                    <label for="base__code" class="form__field--label">De</label>
+                    <input list="currencies" name="base__code" id="base__code" class="form__input" required>
+                </div>
+                <div class="form__field">
+                    <label for="target__code" class="form__field--label">A</label>
+                    <input list="currencies" name="target__code" id="target__code" class="form__input" required>
+                </div>
+                <div id="switch-currencies">
+                    <a href="#"><img src="./img/switch-icon.svg" alt="Switch"></a>
+                </div>
+                <input type="submit" value="Convertir" class="form__btn">
+                <datalist id="currencies">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="AED">AED - UAE Dirham</option>
+                    <option value="ARS">ARS - Argentine Peso</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="BOB">BOB - Bolivian Boliviano</option>
+                    <option value="BRL">BRL - Brazilian Real</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="CHF">CHF - Swiss Franc</option>
+                    <option value="CLP">CLP - Chilean Peso</option>
+                    <option value="CNY">CNY - Chinese Renminbi</option>
+                    <option value="COP">COP - Colombian Peso</option>
+                    <option value="HKD">HKD - Hong Kong Dollar</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="KRW">KRW - South Korean Won</option>
+                </datalist>
+            </form>
+            <div class="result"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <a href="https://github.com/JuanLuisCorrea" target="_blank" class="footer__attribuition">Juan Luis Correa Solórzano &#8599;</a>
+        <a href="https://github.com/JuanLuisCorrea/x-change.com.git" target="_blank" class="footer__repository">Repositorio del proyecto &#8599;</a>
+        <p class="footer__copyright">X-Change.com© Todos los derechos reservados.</p>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
